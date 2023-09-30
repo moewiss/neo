@@ -22,15 +22,11 @@ pipeline {
         }
         stage('Deploy Ghost CMS') {
             steps {
-                sudo yum update -y
-                sudo yum install -y nodejs npm
-                sudo npm install -g ghost-cli
-
-                mkdir ghost
-                cd ghost
-
-                ghost install
-                ghost start
+                sh 'yum update -y'
+                sh 'yum install -y nodejs npm'
+                sh 'npm install -g ghost-cli'
+                sh 'mkdir ghost'
+                sh 'cd ghost && ghost install && ghost start'
 
             }
         }
