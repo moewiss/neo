@@ -1,8 +1,8 @@
 pipeline {
     agent any
     environment {
-        AWS_ACCESS_KEY_ID     = credentials('AKIA6AFWFPO5HQKQMCMK')  // Jenkins secret text credential ID
-        AWS_SECRET_ACCESS_KEY = credentials('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')  // Jenkins secret text credential ID
+        AWS_ACCESS_KEY_ID     = 'AKIA6AFWFPO5HQKQMCMK'  // Jenkins secret text credential ID
+        AWS_SECRET_ACCESS_KEY = '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'  // Jenkins secret text credential ID
     }
     stages {
         stage('Terraform Init') {
